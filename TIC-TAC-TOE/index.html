@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/overlay.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <script src="/JavaScript/fun_changePlayerName.js" defer></script>
+    <script src="/JavaScript/app.js" defer></script>
+    <script src="/JavaScript/game.js"></script>
+    <title>TIC_TAC_TOE Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>TIC TAC TOE</h1>
+      <p>Built by rogy</p>
+    </header>
+
+    <aside id="aside">
+      <h2>Choose User Name</h2>
+
+      <form>
+        <div id="input_form">
+          <label for="inputName">Input Name </label> <br />
+          <input type="text" name="playername" id="input_userName" required />
+        </div>
+        <br />
+        <p id="alert_input"></p>
+        <div id="button_yesorno">
+          <button type="submit" id="button_change">Change</button>
+          <button type="reset" id="button_cancel">Cancel</button>
+        </div>
+      </form>
+    </aside>
+    <div id="backdrop"></div>
+
+    <main>
+      <section>
+        <div class="container_main">
+          <div class="box_player_1">
+            <h3>Player 1</h3>
+            <p id="name_1">Name</p>
+            <span class="mark">X</span>
+            <button class="button_edit" id="buttonEdit_1" data-player="1">
+              Edit
+            </button>
+          </div>
+          <div class="box_player_2">
+            <h3>Player 2</h3>
+            <p id="name_2">Name</p>
+            <span class="mark">O</span>
+            <button class="button_edit" id="buttonEdit_2" data-player="2">
+              Edit
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <button id="button_start">Start New Game</button>
+      </section>
+
+      <section id="activeGame">
+        <article id="gameovers">
+          <h2><span id="winnerName"></span> win!</h2>
+          <p>Click "Start New Game, if you want new game</p>
+        </article>
+      </section>
+
+      <section id="section_game">
+        <p>it's your turn <span id="CSS_PlayerName">PLAYER NAME</span></p>
+        <div id="container_9">
+          <div data-col="0" data-row="0"></div>
+          <div data-col="1" data-row="0"></div>
+          <div data-col="2" data-row="0"></div>
+
+          <div data-col="0" data-row="1"></div>
+          <div data-col="1" data-row="1"></div>
+          <div data-col="2" data-row="1"></div>
+
+          <div data-col="0" data-row="2"></div>
+          <div data-col="1" data-row="2"></div>
+          <div data-col="2" data-row="2"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
